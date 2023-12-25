@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple-gradient: linear-gradient(45deg, #190361 0%, #B0F 100%);
+  --purple: #34355B;
+  --white: #FFFFFF;
+  --orange: #FF9500;
+  --orange-dark: hsl(35, 100%, 40%);
+  --blue: #E4EDF1;
+  
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--purple-gradient);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+h2 {
+  font-family: 'Montserrat';
+  color: var(--purple);
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.template-screen {
+  background-color: var(--white);
+  border-radius: .5rem;
+  padding: 48px 64px 64px;
+  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.80);
+  max-width: 42.8rem;
+  text-align: center;
+}
+
+#screen-1 p {
+  color: var(--purple);
+  font-family: 'DM Sans';
+  font-size: 1.5rem;
+  margin-bottom: 2.8rem;
+}
+
+#open-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#open-btn:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+#message {
+  background-color: var(--blue);
+  padding: 1rem;
+  box-shadow: .2rem .2rem .2rem 0rem rgba(85, 85, 85, 0.50);
+
+  font-family: 'Dancing Script';
+  font-size: 2.4rem;
+}
+
+#message.animation {
+  animation-name: fadeIn;
+  animation-fill-mode: backwards;
+  animation-duration: 2s;
+}
+
+.button {
+  padding: 1.6rem;
+  background-color: var(--orange);
+
+  font-family: 'DM Sans';
+  font-size: 1.5rem;
+  color: var(--white);
+  text-align: center;
+  font-weight: 700;
+
+  border: none;
+  border-radius: .4rem;
+  cursor: pointer;
+
+  transition: background .3s;
+}
+
+.button:hover {
+  background-color: var(--orange-dark);
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(.2) translateY(48rem);
+  }
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
